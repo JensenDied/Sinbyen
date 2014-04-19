@@ -27,21 +27,23 @@ void configure() {
 	add_description(({
         "The glossy",
 		Description(([
-                Description_Type                        : Description_Type_Element_Name,
-                Description_Index                       : Element(([
-                    Element_Type                        : Material_Leather,
-                    Element_Color                       : "black",
-                ])),
+            Description_Type                        : Description_Type_Element_Name,
+            Description_Index                       : Element(([
+                Element_Type                        : Material_Leather,
+                Element_Color                       : "black",
+            ])),
 		])),
-        "thigh boots appear to be comfortable and stylish. ",
+        "thigh boots appear to be comfortable and stylish.",
+    }));
+    add_description(({
         "Covering the feet and legs from toe to thigh, the boots magically adjust to",
         "fit the wearer.  For additional protection,",
 		Description(([
-                Description_Type                        : Description_Type_Element_Name,
-                Description_Index                       : Element(([
-                    Element_Type                        : Material_Adamantite,
-                    Element_Color                       : "black",
-                ])),
+            Description_Type                        : Description_Type_Element_Name,
+            Description_Index                       : Element(([
+                Element_Type                        : Material_Adamantite,
+                Element_Color                       : "black",
+            ])),
 		])),
         "plates have been inserted between the lining and the leather.",
 	}));
@@ -66,5 +68,5 @@ void configure() {
 	add_property(Prop_Slippery);
 	add_hook(Do_Equip_Item, #'boots_do_equip);
 	add_hook(Do_Unequip_Item, #'boots_do_unequip);
-
 }
+
