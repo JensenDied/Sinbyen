@@ -5,15 +5,16 @@ inherit "/std/item";
 
 private descriptor attr_mod;
 
-
 void boots_do_equip(mapping args) {
 	attr_mod = args["who"]->add_attribute_modifier(([
 		Modifier_Index  : Attr_Wil,
 		Modifier_Amount : 20,
 	]));
-	args["who"]->message(({"As",0,({"pull",0}), ({'r', 0, this_object() }),
-		"on, they slowly shape themselves to blend with", ({'r', 0, "legs"}),
-		"and enhance", ({'r',0,"natural beauty" })}));
+	args["who"]->message(({
+        "as", 0 ,({ "pull", 0 }), ({ 'r', 0, this_object() }),
+		"on, they slowly shape themselves to blend with", ({ 'r', 0, "legs" }),
+		"and enhance", ({ 'r', 0, "natural beauty" }),
+    }));
 }
 
 void boots_do_unequip(mapping args) {
@@ -24,9 +25,7 @@ void configure() {
 	::configure();
 	armour()->set_race("kielleth");
 	add_description(({
-	
-	"The glossy",
-	
+        "The glossy",
 		Description(([
                 Description_Type                        : Description_Type_Element_Name,
                 Description_Index                       : Element(([
@@ -34,11 +33,9 @@ void configure() {
                     Element_Color                       : "black",
                 ])),
 		])),
-	
-	"thigh boots appear to be comfortable and stylish. ",
-	"Covering the feet and legs from toe to thigh, the boots magically adjust to",
-	"fit the wearer.  For additional protection,",
-
+        "thigh boots appear to be comfortable and stylish. ",
+        "Covering the feet and legs from toe to thigh, the boots magically adjust to",
+        "fit the wearer.  For additional protection,",
 		Description(([
                 Description_Type                        : Description_Type_Element_Name,
                 Description_Index                       : Element(([
@@ -46,8 +43,7 @@ void configure() {
                     Element_Color                       : "black",
                 ])),
 		])),
-	"plates have been inserted between the lining and the leather.",
-	
+        "plates have been inserted between the lining and the leather.",
 	}));
 	armour()->set_armour_type(Armour_Type_Pair_of_Thigh_Boots);
 	armour()->set_armour_style(Armour_Style_Simple);
@@ -55,7 +51,7 @@ void configure() {
 	add_proportion(([
 		Element_Type       : Material_Leather,
 		Element_Proportion : 0.7,
-		Element_Color	   : "black",
+		Element_Color      : "black",
 	]));
 	add_proportion(([
 		Element_Type       : Material_Adamantite,
